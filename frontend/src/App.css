@@ -1,0 +1,269 @@
+/* // defi-easysave/src/App.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Orbitron', sans-serif;
+  background: linear-gradient(135deg, #0d1b2a 0%, #1b263b 100%);
+  color: #e0e1dd;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.app::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M30 0L59.4 15 59.4 45 30 60 0.6 45 0.6 15 30 0z" fill="%231b263b" fill-opacity="0.2"/%3E%3C/svg%3E');
+  opacity: 0.3;
+  z-index: -1;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #00ff9d;
+  padding-bottom: 10px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #00ff9d;
+  text-shadow: 0 0 10px rgba(0, 255, 157, 0.5);
+}
+
+.connect-wallet button {
+  background: linear-gradient(45deg, #4158d0, #c850c0);
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.connect-wallet button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(200, 80, 192, 0.5);
+}
+
+.connect-wallet p {
+  color: #e0e1dd;
+  font-weight: 600;
+}
+
+.tabs {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.tabs button {
+  background: #1b263b;
+  padding: 12px 24px;
+  border: 1px solid #4158d0;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #e0e1dd;
+  transition: all 0.3s;
+}
+
+.tabs button.active {
+  background: linear-gradient(45deg, #4158d0, #c850c0);
+  color: white;
+  border: none;
+}
+
+.tabs button:hover {
+  background: #4158d0;
+  color: white;
+}
+
+.form-container {
+  background: rgba(27, 38, 59, 0.9);
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #00ff9d;
+  box-shadow: 0 0 20px rgba(0, 255, 157, 0.2);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #00ff9d;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #4158d0;
+  border-radius: 8px;
+  background: #0d1b2a;
+  color: #e0e1dd;
+}
+
+button {
+  background: linear-gradient(45deg, #4158d0, #c850c0);
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(200, 80, 192, 0.5);
+}
+
+.refresh-button {
+  margin-bottom: 20px;
+}
+
+.token-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.token-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.token-image {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.spin-y {
+  animation: spinY 1s linear;
+}
+
+@keyframes spinY {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.button-image {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.withdraw-locked-button {
+  margin-top: 15px;
+}
+
+.dashboard {
+  background: rgba(27, 38, 59, 0.9);
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #00ff9d;
+  box-shadow: 0 0 20px rgba(0, 255, 157, 0.2);
+}
+
+.balance-info {
+  display: grid;
+  gap: 20px;
+}
+
+.balance-info h3 {
+  color: #00ff9d;
+  margin-bottom: 10px;
+}
+
+.balance-info p {
+  margin: 8px 0;
+  color: #e0e1dd;
+}
+
+.analytics table {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(27, 38, 59, 0.9);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.analytics th,
+.analytics td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #4158d0;
+  color: #e0e1dd;
+}
+
+.analytics th {
+  background: #4158d0;
+  color: white;
+}
+
+.learn {
+  background: rgba(27, 38, 59, 0.9);
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #00ff9d;
+}
+
+.learn ul {
+  list-style-type: none;
+  margin-left: 0;
+}
+
+.learn ul li::before {
+  content: '⬢ ';
+  color: #00ff9d;
+}
+
+.transaction-status {
+  margin-top: 20px;
+  padding: 12px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.transaction-status.pending {
+  background: #ffd700;
+  color: #0d1b2a;
+}
+
+.transaction-status.success {
+  background: #00ff9d;
+  color: #0d1b2a;
+}
+
+.transaction-status.error {
+  background: #ff4d4d;
+  color: white;
+}
