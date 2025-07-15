@@ -16,6 +16,7 @@ import MockUSDCABI from "./abis/MockUSDC.json";
 import MockDAIABI from "./abis/MockDAI.json";
 import MockUSDTABI from "./abis/MockUSDT.json";
 import "./App.css";
+import Chatbot from "./components/Chatbot";
 
 const App = () => {
   const [provider, setProvider] = useState(null);
@@ -346,6 +347,7 @@ const App = () => {
           <p>Please connect your wallet to start saving.</p>
         )}
       </main>
+      <Chatbot activeTab={activeTab} />
     </div>
   );
 };
