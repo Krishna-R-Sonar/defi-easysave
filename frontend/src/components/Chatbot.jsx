@@ -45,7 +45,7 @@ const Chatbot = ({ activeTab }) => {
       `;
 
       // Call backend API
-      const response = await axios.post('http://localhost:5000/api/chatbot', { prompt });
+      const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/chatbot`, { prompt });
       const botResponse = response.data.response;
       setMessages([...messages, { sender: 'user', text: input }, { sender: 'bot', text: botResponse }]);
     } catch (error) {

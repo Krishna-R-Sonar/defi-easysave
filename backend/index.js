@@ -8,7 +8,10 @@ const PORT = process.env.PORT || 5000;
 
 // Middleware
 app.use(cors());
-app.use(express.json());
+const cors = require('cors');
+app.use(cors({
+  origin: 'https://defi-easysave.vercel.app',
+}));
 
 // Endpoint to handle chatbot requests
 app.post('/api/chatbot', async (req, res) => {
